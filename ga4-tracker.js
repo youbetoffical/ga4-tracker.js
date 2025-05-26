@@ -1,3 +1,4 @@
+<script>
 (function () {
   // 初始化 gtag
   window.dataLayer = window.dataLayer || [];
@@ -6,7 +7,7 @@
   gtag('js', new Date());
   gtag('config', 'G-19P27Z96J0', {
     send_page_view: false,
-    debug_mode: true  // << 加這行才會出現在 DebugView
+    debug_mode: true  // 啟用 DebugView 模式
   });
 
   // 發送一次 page_view
@@ -21,7 +22,7 @@
 
   sendPageView();
 
-  // 每秒偵測是否換頁（單頁應用）
+  // 每秒偵測是否換頁（SPA 支援）
   let lastPath = location.pathname;
   setInterval(() => {
     const newPath = location.pathname;
@@ -31,3 +32,4 @@
     }
   }, 1000);
 })();
+</script>
