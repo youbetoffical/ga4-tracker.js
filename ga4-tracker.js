@@ -5,7 +5,8 @@
 
   gtag('js', new Date());
   gtag('config', 'G-19P27Z96J0', {
-    send_page_view: false
+    send_page_view: false,
+    debug_mode: true  // << 加這行才會出現在 DebugView
   });
 
   // 發送一次 page_view
